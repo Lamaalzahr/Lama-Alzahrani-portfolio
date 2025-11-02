@@ -7,7 +7,8 @@ width: 380px;
 border-radius: 1rem;
 box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
 padding: 1.5rem;
-border: 1px solid #e9d5ff;       }
+border: 1px solid #e9d5ff; 
+margin: 1rem;            }
 
 .chat-title{
 text-align:center;
@@ -22,7 +23,7 @@ font-size: 0.85rem;
 margin-bottom: 1rem;       }
 
 .chat-box{
-height: 320px;
+height: 60vh;
 overflow-y: auto;
 border: 1px solid #e5e7eb;
 border-radius: 0.75rem;
@@ -111,25 +112,26 @@ color: #6b21a8;
 
 @media (max-width: 480px) {
 .chat-container {
-width: 90%;
-height: 90%;
+width: 95%;
+height: auto;
 padding: 1rem;
 }
 
 .chat-box {
-height: 60vh; }
+height: 70vh; }
 
 .chat-title {
-font-size: 1.2rem;
+font-size: 1.3rem;
 }
 
 .chat-input input {
-font-size: 0.85rem;
+font-size: 0.9rem;
 }
 
 .chat-input button {
-padding: 0.4rem 0.8rem;
-font-size: 0.85rem;
+padding: 0.5rem 1rem;
+font-size: 0.9rem;
+}
 }
 
 .dropdown-hamburger {
@@ -146,7 +148,7 @@ height: auto;
 }
 
 .chat-box {
-height: 65vh;
+height: 70vh;
 }
 }
 
@@ -155,3 +157,4 @@ height: 65vh;
 width: 380px;
 }
 }
+
