@@ -8,7 +8,9 @@ border-radius: 1rem;
 box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
 padding: 1.5rem;
 border: 1px solid #e9d5ff; 
-margin: 1rem;            }
+margin: 1rem;
+max-hight: 90vh;
+overflow: hidden;     }
 
 .chat-title{
 text-align:center;
@@ -23,7 +25,7 @@ font-size: 0.85rem;
 margin-bottom: 1rem;       }
 
 .chat-box{
-height: 60vh;
+height: 50vh;
 overflow-y: auto;
 border: 1px solid #e5e7eb;
 border-radius: 0.75rem;
@@ -157,4 +159,5 @@ height: 70vh;
 width: 380px;
 }
 }
+
 
