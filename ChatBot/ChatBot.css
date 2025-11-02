@@ -9,7 +9,7 @@ box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
 padding: 1.5rem;
 border: 1px solid #e9d5ff; 
 margin: 1rem;
-max-hight: 90vh;
+max-height: 90vh;
 overflow: hidden;     }
 
 .chat-title{
@@ -141,7 +141,6 @@ top: 5px;
 right: 5px;
 transform: scale(0.9);
 }
-}
 
 @media (min-width: 481px) and (max-width: 768px) {
 .chat-container {
@@ -159,5 +158,9 @@ height: 70vh;
 width: 380px;
 }
 }
+
+  
+}
+
 
 
