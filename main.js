@@ -26,3 +26,28 @@ alert('حدث خطأ، يرجى المحاولة مرة أخرى.');
 alert('حدث خطأ في الاتصال بالخادم.');
 }
 });
+
+menuBtn.addEventListener('click', () => {
+document.body.classList.toggle('body-blur');
+});
+
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-link");
+
+function setActiveLink() {
+let current = sections[0].id;
+
+sections.forEach(section => {
+if (window.scrollY >= section.offsetTop - 150) {
+    current = section.id;
+}
+});
+
+navLinks.forEach(link => {
+link.classList.remove("active");
+if (link.getAttribute("href") === "#" + current) {
+    link.classList.add("active");
+}
+});
+}
+

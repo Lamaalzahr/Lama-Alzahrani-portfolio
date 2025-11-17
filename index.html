@@ -7,28 +7,54 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body class="bg-gradient-to-b from-gray-50 to-gray-200 text-gray-800 font-sans leading-relaxed min-h-screen flex flex-col">
 
-<nav class="fixed top-5 right-1/2 translate-x-1/2 bg-white/90 backdrop-blur-md shadow-md rounded-2xl px-10 py-3 flex justify-center items-center gap-8 border border-[#5a664f]/30 z-50">
-<a href="#" class="text-[#5a664f] font-semibold hover:text-[#5a664f] transition">الرئيسية</a>
-<a href="#about" class="text-gray-700 hover:text-[#5a664f] transition">نبذة</a>
-<a href="#experience" class="text-gray-700 hover:text-[#5a664f] transition">الخبرة</a>
-<a href="#courses" class="text-gray-700 hover:text-[#5a664f] transition">الدورات</a>
-<a href="#projects" class="text-gray-700 hover:text-[#5a664f] transition">المشاريع</a>
-<a href="#contact" class="text-gray-700 hover:text-[#5a664f] transition">تواصل</a>
+<nav class="md:hidden fixed top-5 left-5 bg-white/90 backdrop-blur-md shadow-md rounded-2xl px-6 py-3 flex items-center border border-[#5a664f]/30 z-50">
+
+<button id="menu-btn" class="text-[#5a664f] focus:outline-none">
+<svg xmlns="http://w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+stroke-width="2" stroke="currentColor" class="w-7 h-7">
+<path stroke-linecap="round" stroke-linejoin="round"
+d="M4 6h16M4 12h16M4 18h16"/>
+</svg>
+</button>
+<div id="menu-items"
+class="hidden flex flex-col gap-3 absolute top-14 left-0 bg-white/95 backdrop-blur-md shadow-md border border-[#5a664f]/30 rounded-xl px-6 py-4 w-56 z-50 text-center">
+<a href="#hero" class="nav-link text-gray-700 hover:text-[#5a664f] text-2xl font-bold">الرئيسية</a>
+<a href="#about" class="nav-link text-gray-700 hover:text-[#5a664f] text-2xl font-bold">نبذة</a>
+<a href="#experience" class="nav-link text-gray-700 hover:text-[#5a664f] text-2xl font-bold">الخبرة</a>
+<a href="#courses" class="nav-link text-gray-700 hover:text-[#5a664f] text-2xl font-bold">الدورات</a>
+<a href="#projects" class="nav-link text-gray-700 hover:text-[#5a664f] text-2xl font-bold">المشاريع</a>
+<a href="#contact" class="nav-link text-gray-700 hover:text-[#5a664f] text-2xl font-bold">تواصل</a>
+
+</div>
 </nav>
 
-<main class="flex-grow">
+<div id="overlay"
+class="hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-40"></div>
+
+<nav class="hidden md:flex fixed top-5 right-1/2 translate-x-1/2 bg-white/90 backdrop-blur-md shadow-md rounded-2xl px-10 py-3 justify-center items-center gap-8 border border-[#5a664f]/30 z-50 flex gap-5">
+
+<a href="#hero" class="nav-link text-gray-700 hover:text-[#5a664f] text-2xl font-bold">الرئيسية</a>
+<a href="#about" class="nav-link text-gray-700 hover:text-[#5a664f] text-2xl font-bold">نبذة</a>
+<a href="#experience" class="nav-link text-gray-700 hover:text-[#5a664f] text-2xl font-bold">الخبرة</a>
+<a href="#courses" class="nav-link text-gray-700 hover:text-[#5a664f] text-2xl font-bold">الدورات</a>
+<a href="#projects" class="nav-link text-gray-700 hover:text-[#5a664f] text-2xl font-bold">المشاريع</a>
+<a href="#contact" class="nav-link text-gray-700 hover:text-[#5a664f] text-2xl font-bold">تواصل</a>
+
+</nav>
+
+<main class="px-4 flex-grow">
   
 <section id="hero" class="hero max-w-2xl mx-auto px-4 sm:px-6 flex flex-col items-center text-center mt-[210px]"> 
 <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold mb-1">أهلاً، أنا</h1>
 <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-2" style="color: #5a664f;">لمى الزهراني</h1>
 <h5 class="text-lg sm:text-xl text-gray-600 mb-6">Front-End Developer</h5>
 
-<div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
-<div class="flex space-x-5 space-x-reverse mb-4 md:mb-0">
+<div class="flex justify-center gap-x-5 mb-4 md:mb-0">
 <a href="https://wa.me/966539207550" style="color:#5a664f;"><i class="fab fa-whatsapp fa-lg"></i></a>
 <a href="https://x.com/lamaalzahr?s=21" style="color:#5a664f;"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
 <a href="https://www.linkedin.com/in/lama-alzahrani-186a5a185?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" style="color:#5a664f;"><i class="fab fa-linkedin fa-lg"></i></a>
@@ -37,7 +63,8 @@
 </div>
 </section>
 
-<section id="about" class="about max-w-2xl mx-auto px-4 sm:px-6 mt-[150px] bg-white border rounded-2xl p-6 sm:p-10 text-center shadow-sm mx-4" style="border-color: #5a664f;">
+
+<section id="about" class="about max-w-2xl mx-auto px-4 sm:px-6 mt-[150px] bg-white border rounded-2xl p-6 sm:p-10 text-center shadow-sm" style="border-color: #5a664f;">
 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">من أنا</h2>
 <div class="w-24 h-2 rounded mx-auto mb-6 animate-gradient"></div>
 
@@ -62,12 +89,12 @@
 </div>
 <div class="border rounded-xl p-5" style="border-color: #5a664f;">
 <h3 class="text-[#5a664f] font-semibold mb-1">الأعمال</h3>
-<p>سيتم عرض مشاريع مميزة قريباً ✨</p>
+<p>انظر ماذا أنجزنا… والمزيد في الطريق✨</p>
 </div>
 </div>
 </section>
 
-<section id="experience" class="max-w-2xl mx-auto px-4 sm:px-6 mt-16 bg-white border rounded-2xl p-6 sm:p-10 text-center shadow-sm mx-4" style="border-color: #5a664f;">
+<section id="experience" class="max-w-2xl mx-auto px-4 sm:px-6 mt-16 bg-white border rounded-2xl p-6 sm:p-10 text-center shadow-sm" style="border-color: #5a664f;">
 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3"> الخبرة </h2>
 <div class="w-24 h-2 rounded mx-auto mb-6 animate-gradient"></div>
 
@@ -82,7 +109,7 @@
 </section>
 
 
-<section id="courses" class="max-w-2xl mx-auto px-4 sm:px-6 mt-16 bg-white border rounded-2xl p-6 sm:p-10 text-center shadow-sm mx-4" style="border-color: #5a664f;">
+<section id="courses" class="max-w-2xl mx-auto px-4 sm:px-6 mt-16 bg-white border rounded-2xl p-6 sm:p-10 text-center shadow-sm" style="border-color: #5a664f;">
 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3"> الدورات </h2>
 <div class="w-24 h-2 rounded mx-auto mb-6 animate-gradient"></div>
 
@@ -118,7 +145,7 @@
 </div>
 </section>
 
-<section id="skills" class="max-w-2xl mx-auto px-4 sm:px-6 mt-16 bg-white border rounded-2xl p-6 sm:p-10 text-center shadow-sm mx-4" style="border-color: #5a664f;">
+<section id="skills" class="max-w-2xl mx-auto px-4 sm:px-6 mt-16 bg-white border rounded-2xl p-6 sm:p-10 text-center shadow-sm" style="border-color: #5a664f;">
 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">المهارات</h2>
 <div class="w-24 h-2 rounded mx-auto mb-6 animate-gradient"></div>
 
@@ -131,7 +158,7 @@
 </div>
 </section>
 
-<section id="tools" class="max-w-2xl mx-auto px-4 sm:px-6 mt-16 bg-white border rounded-2xl p-6 sm:p-10 text-center shadow-sm mx-4" style="border-color: #5a664f;">
+<section id="tools" class="max-w-2xl mx-auto px-4 sm:px-6 mt-16 bg-white border rounded-2xl p-6 sm:p-10 text-center shadow-sm" style="border-color: #5a664f;">
 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">الأدوات</h2>
 <div class="w-24 h-2 rounded mx-auto mb-6 animate-gradient"></div>
 
@@ -146,7 +173,7 @@
 </div>
 </section>
 
-<section id="projects" class="max-w-2xl mx-auto px-4 sm:px-6 mt-16 bg-white border rounded-2xl p-6 sm:p-10 text-center shadow-sm mx-4" style="border-color: #5a664f;">
+<section id="projects" class="max-w-2xl mx-auto px-4 sm:px-6 mt-16 bg-white border rounded-2xl p-6 sm:p-10 text-center shadow-sm" style="border-color: #5a664f;">
 <h2 class=" text-2xl sm:text-3xl font-bold text-gray-900 mb-3"> المشاريع </h2>
 <div class="w-24 h-2 rounded mx-auto mb-6 animate-gradient"></div>
 
@@ -186,7 +213,7 @@ class="inline-block bg-[#5a664f] text-white text-sm px-4 py-2 rounded-lg hover:b
 </section>
 
 
-<section id="contact" class="max-w-md mx-auto px-4 sm:px-6 my-20 bg-white border rounded-2xl p-6 sm:p-10 text-center shadow-sm mx-4" style="border-color: #5a664f;">
+<section id="contact" class="max-w-md mx-auto px-4 sm:px-6 my-20 bg-white border rounded-2xl p-6 sm:p-10 text-center shadow-sm" style="border-color: #5a664f;">
 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">تواصل معي</h2>
 <div class="w-24 h-2 rounded mx-auto mb-6 animate-gradient"></div>
 
@@ -212,9 +239,10 @@ class="inline-block bg-[#5a664f] text-white text-sm px-4 py-2 rounded-lg hover:b
 
 </main>
 
-<footer class="bg-[#5a664f] text-white py-6 mt-10">
+<footer class="w-full bg-[#5a664f] text-white py-6 text-center px-0">
+
 <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
-<div class="flex space-x-5 space-x-reverse mb-4 md:mb-0">
+    <div class="flex justify-center md:justify-end space-x-5 space-x-reverse mb-4 md:mb-0">
 <a href="https://wa.me/966539207550" class="hover:text-gray-300 transition"><i class="fab fa-whatsapp fa-lg"></i></a>
 <a href="https://x.com/lamaalzahr?s=21" class="hover:text-gray-300 transition"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
 <a href="https://www.linkedin.com/in/lama-alzahrani-186a5a185" class="hover:text-gray-300 transition"><i class="fab fa-linkedin fa-lg"></i></a>
@@ -226,8 +254,24 @@ class="inline-block bg-[#5a664f] text-white text-sm px-4 py-2 rounded-lg hover:b
 </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="main.js"></script>
+
+<script>
+const btn = document.getElementById("menu-btn");
+const menu = document.getElementById("menu-items");
+const overlay = document.getElementById("overlay");
+
+btn.addEventListener("click", () => {
+menu.classList.toggle("hidden");
+overlay.classList.toggle("hidden");
+});
+
+overlay.addEventListener("click", () => {
+menu.classList.add("hidden");
+overlay.classList.add("hidden");
+});
+</script>
+
+
 </body>
 </html>
-
-
