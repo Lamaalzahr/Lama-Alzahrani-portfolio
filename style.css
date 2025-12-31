@@ -1,0 +1,148 @@
+
+body {
+font-family: 'Noto Kufi Arabic', sans-serif;
+}
+h1, h2, h3 {
+font-family: 'Noto Kufi Arabic', sans-serif;
+}
+
+.im-fell-french-canon-regular {
+font-family: "IM Fell French Canon", serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.im-fell-french-canon-regular-italic {
+font-family: "IM Fell French Canon", serif;
+font-weight: 400;
+font-style: italic;
+}
+
+* {
+font-family: 'Noto Kufi Arabic', sans-serif;
+}
+
+
+@keyframes gradientMove {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+background: linear-gradient(90deg, #9cc674, #758666, #354a21);
+background-size: 300% 100%;
+animation: gradientMove 3s linear infinite;
+}
+
+html { 
+scroll-behavior: smooth;
+scroll-padding-top: 100px; 
+}
+
+header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 50;
+background-color: white;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.border-color {
+border-color: #5a664f;
+}
+
+.w-30 { width: 120px; }
+.h-25 { height: 100px; }
+
+
+.container{
+max-width: 900px;
+margin: auto;
+padding:0 20px;
+}
+
+@media(max-width:768px) {
+.hero{
+flex-direction: column;
+text-align: center;
+}    
+.hero-img img{
+max-width: 250px;
+}
+}
+
+.nav-link.active {
+color: #5a664f; 
+font-weight: 600;
+}
+
+@font-face {
+font-family: 'Noto Kufi Arabic';
+src: url('fonts/NotoKufiArabic-Regular.ttf') format('truetype');
+font-weight: 400;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: 'Noto Kufi Arabic';
+src: url('fonts/NotoKufiArabic-Bold.ttf') format('truetype');
+font-weight: 700;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Noto Kufi Arabic';
+src: url('fonts/NotoKufiArabic-Light.ttf') format('truetype');
+font-weight: 300;
+font-style: normal;
+}
+
+
+body, h1, h2, h3, h4, h5, h6, p, span, strong, li, a, input, textarea, button, div {
+font-family: 'Noto Kufi Arabic', sans-serif !important;
+}
+input, textarea, select, button {
+font-family: 'Noto Kufi Arabic', sans-serif !important;
+}
+
+.nav-link.active {
+color: #5a664f;     
+font-weight: 600;      
+}
+
+.nav-link.active::after {
+content: '';
+display: block;
+width: 100%;
+height: 2px;
+background: #5a664f; 
+margin-top: 2px;
+border-radius: 2px;
+}
+
+/* Mobile Hamburger Side Drawer */
+@media (max-width: 768px) {
+#menu-items {
+position: fixed;
+top: 0;
+right: 0;
+height: 100vh;
+width: 260px;
+
+transform: translateX(100%);
+transition: transform 0.3s ease;
+
+border-radius: 0;
+text-align: right;
+padding-top: 100px;
+}
+
+#menu-items.show {
+transform: translateX(0);
+}
+}
+
