@@ -12,29 +12,24 @@
 
 <body class="bg-gradient-to-b from-gray-50 to-gray-200 text-gray-800 font-sans leading-relaxed min-h-screen flex flex-col">
 
-<nav class="md:hidden fixed top-5 left-5 bg-white/90 backdrop-blur-md shadow-md rounded-2xl px-6 py-3 flex items-center border border-[#5a664f]/30 z-50">
-
-<button id="menu-btn" class="text-[#5a664f] focus:outline-none">
-<svg xmlns="http://w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-stroke-width="2" stroke="currentColor" class="w-7 h-7">
-<path stroke-linecap="round" stroke-linejoin="round"
-d="M4 6h16M4 12h16M4 18h16"/>
-</svg>
+<!-- Mobile Hamburger Menu -->
+<nav class="md:hidden fixed top-0 right-0 z-50">
+<button id="menu-btn" class="p-4 text-[#5a664f] focus:outline-none">
+<i class="fas fa-bars text-2xl"></i>
 </button>
-<div id="menu-items"
-class="hidden flex flex-col gap-3 absolute top-14 left-0 bg-white/95 backdrop-blur-md shadow-md border border-[#5a664f]/30 rounded-xl px-6 py-4 w-56 z-50 text-center">
-<a href="#hero" class="nav-link text-gray-700 hover:text-[#5a664f] text-2xl font-bold">الرئيسية</a>
-<a href="#about" class="nav-link text-gray-700 hover:text-[#5a664f] text-2xl font-bold">نبذة</a>
-<a href="#experience" class="nav-link text-gray-700 hover:text-[#5a664f] text-2xl font-bold">الخبرة</a>
-<a href="#courses" class="nav-link text-gray-700 hover:text-[#5a664f] text-2xl font-bold">الدورات</a>
-<a href="#projects" class="nav-link text-gray-700 hover:text-[#5a664f] text-2xl font-bold">المشاريع</a>
-<a href="#contact" class="nav-link text-gray-700 hover:text-[#5a664f] text-2xl font-bold">تواصل</a>
 
+<div id="menu-items" class="fixed top-0 right-0 h-full w-64 bg-white/95 backdrop-blur-md shadow-md transform translate-x-full transition-transform duration-300 z-50 flex flex-col pt-20 px-6 gap-4">
+<a href="#hero" class="nav-link text-gray-700 hover:text-[#5a664f] text-xl font-bold">الرئيسية</a>
+<a href="#about" class="nav-link text-gray-700 hover:text-[#5a664f] text-xl font-bold">نبذة</a>
+<a href="#experience" class="nav-link text-gray-700 hover:text-[#5a664f] text-xl font-bold">الخبرة</a>
+<a href="#courses" class="nav-link text-gray-700 hover:text-[#5a664f] text-xl font-bold">الدورات</a>
+<a href="#projects" class="nav-link text-gray-700 hover:text-[#5a664f] text-xl font-bold">المشاريع</a>
+<a href="#contact" class="nav-link text-gray-700 hover:text-[#5a664f] text-xl font-bold">تواصل</a>
 </div>
 </nav>
 
-<div id="overlay"
-class="hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-40"></div>
+<div id="overlay" class="fixed inset-0 bg-black/20 backdrop-blur-sm hidden z-40"></div>
+
 
 <nav class="hidden md:flex fixed top-5 right-1/2 translate-x-1/2 bg-white/90 backdrop-blur-md shadow-md rounded-2xl px-10 py-3 justify-center items-center gap-8 border border-[#5a664f]/30 z-50 flex gap-5">
 
@@ -212,7 +207,6 @@ class="inline-block bg-[#5a664f] text-white text-sm px-4 py-2 rounded-lg hover:b
 </div>
 </section>
 
-
 <section id="contact" class="max-w-md mx-auto px-4 sm:px-6 my-20 bg-white border rounded-2xl p-6 sm:p-10 text-center shadow-sm" style="border-color: #5a664f;">
 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">تواصل معي</h2>
 <div class="w-24 h-2 rounded mx-auto mb-6 animate-gradient"></div>
@@ -236,13 +230,12 @@ class="inline-block bg-[#5a664f] text-white text-sm px-4 py-2 rounded-lg hover:b
 </form>
 </section>
 
-
 </main>
 
 <footer class="w-full bg-[#5a664f] text-white py-6 text-center px-0">
 
 <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
-    <div class="flex justify-center md:justify-end space-x-5 space-x-reverse mb-4 md:mb-0">
+<div class="flex justify-center md:justify-end space-x-5 space-x-reverse mb-4 md:mb-0">
 <a href="https://wa.me/966539207550" class="hover:text-gray-300 transition"><i class="fab fa-whatsapp fa-lg"></i></a>
 <a href="https://x.com/lamaalzahr?s=21" class="hover:text-gray-300 transition"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
 <a href="https://www.linkedin.com/in/lama-alzahrani-186a5a185" class="hover:text-gray-300 transition"><i class="fab fa-linkedin fa-lg"></i></a>
