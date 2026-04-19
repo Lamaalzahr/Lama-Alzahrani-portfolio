@@ -1,0 +1,157 @@
+body{
+font-family:'cairo', sans-serif;    }
+
+.chat-container{
+background: white;
+width: 380px;
+border-radius: 1rem;
+box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+padding: 1.5rem;
+border: 1px solid #e9d5ff;       }
+
+.chat-title{
+text-align:center;
+font-weight: bold;
+font-size: 1.4rem;
+color: #7e22ce;          }
+
+.chat-subtitle{
+text-align: center;
+color: #6b7280;
+font-size: 0.85rem;
+margin-bottom: 1rem;       }
+
+.chat-box{
+height: 320px;
+overflow-y: auto;
+border: 1px solid #e5e7eb;
+border-radius: 0.75rem;
+padding:0.75rem;
+background: #fafafa;
+margin-bottom: 0.75rem;         }
+
+.chat-input{
+display: flex;
+gap: 0.5rem;            }
+
+.chat-input input{
+flex: 1;
+border: 1px solid #ccc;
+border-radius: 0.75rem;
+padding: 0.5rem;
+font-size: 0.9rem;       }
+
+.chat-input button{
+background-color: #7e22ce;
+color: white;
+border: none;
+border-radius: 0.75rem;
+padding: 0.5rem 1rem;
+cursor: pointer;
+transition: background 0.2s;    }
+
+.message {
+margin-bottom: 0.5rem;  }
+
+.message span {
+display: inline-block;
+padding: 0.5rem 0.75rem;
+border-radius: 1rem;
+font-size: 0.9rem;  }
+
+.user-message span {
+background: #f3e8ff;
+color: #6b21a8;
+text-align: right;  }
+
+.bot-message span {
+background: #e5e7eb;
+color: #333;
+text-align: left;  }
+
+.dropdown-hamburger {
+position: absolute;
+top: 10px;
+right: 10px;
+cursor: pointer;
+z-index: 20;
+}
+
+.dropdown-hamburger .bar {
+width: 25px;
+height: 3px;
+background-color: #7e22ce;
+margin: 4px 0;
+transition: 0.4s;
+}
+
+.dropdown-hamburger .dropdown-menu {
+display: none;
+position: absolute;
+top: 35px;
+right: 0;
+background: white;
+border: 1px solid #ccc;
+border-radius: 0.5rem;
+box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+z-index: 25;
+}
+
+.dropdown-hamburger .dropdown-menu div {
+padding: 0.5rem 1rem;
+cursor: pointer;
+font-size: 0.85rem;
+}
+
+.dropdown-hamburger .dropdown-menu div:hover {
+background-color: #f3e8ff;
+color: #6b21a8;
+}
+
+
+@media (max-width: 480px) {
+.chat-container {
+width: 90%;
+height: 90%;
+padding: 1rem;
+}
+
+.chat-box {
+height: 60vh; }
+
+.chat-title {
+font-size: 1.2rem;
+}
+
+.chat-input input {
+font-size: 0.85rem;
+}
+
+.chat-input button {
+padding: 0.4rem 0.8rem;
+font-size: 0.85rem;
+}
+
+.dropdown-hamburger {
+top: 5px;
+right: 5px;
+transform: scale(0.9);
+}
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+.chat-container {
+width: 70%;
+height: auto;
+}
+
+.chat-box {
+height: 65vh;
+}
+}
+
+@media (min-width: 769px) {
+.chat-container {
+width: 380px;
+}
+}

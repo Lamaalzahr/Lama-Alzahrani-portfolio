@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" conrent="width=device-width, inital-scale=1.0">
+<title> المساعد الذكي </title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="ChatBot.css">
+</head>
+
+<body class="bg-gradient-to-b from-purple-50 to-white flex justify-center items-center h-screen">
+
+<div class="chat-container">
+<h1 class="chat-title"> المساعد الذكي💭 </h1>
+<p class="chat-subtitle"> تم تطويرة بواسطة <span class="font-semibold text-purple-600"> Lama Alzahrani </span></p>
+
+<div id="chatBox" class="chat-box">
+ <div class="dropdown-hamburger">
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+
+<div class="dropdown-menu">
+<div onclick="selectQuestion('السلام عليكم')"> السلام عليكم </div>
+<div onclick="selectQuestion(' مين المطورة')"> المطورة </div>
+<div onclick="selectQuestion('تواصل')">تواصل</div>
+<div onclick="selectQuestion('خدمات')">خدمات</div>
+<div onclick="selectQuestion('موقعكم')"> الموقع </div>
+<div onclick="selectQuestion('التقنيات')"> التقنيات</div>
+<div onclick="selectQuestion('المهارات')"> المهارات</div>
+<div onclick="selectQuestion('المشاريع')"> المشاريع</div>
+<div onclick="selectQuestion('الدورات')"> الدورات</div>
+<div onclick="selectQuestion('هدفك')"> هدفك</div>
+<div onclick="selectQuestion('العمل')"> العمل</div>
+
+
+</div>
+</div>
+</div>
+
+<div class="chat-input">
+<input id="userInput" type="text" placeholder=" أكتب سؤالك... " onkeydown="if(event.key==='Enter') sendMessage()">
+<button onclick="sendMessage()"> إرسال </button>
+</div>
+</div>    
+
+
+
+<script src="ChatBot.js"></script>
+
+
+
+</body>
+</html>
